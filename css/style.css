@@ -1,0 +1,46 @@
+.img_avatar_owner{
+    width:150px;
+    height:150px;
+    padding:3px 3px 3px 3px;
+    border-radius: 125px 125px 125px 125px;
+-moz-border-radius: 125px 125px 125px 125px;
+-webkit-border-radius: 125px 125px 125px 125px;
+
+}
+.img_email{
+    width:30px;
+    height:20px;
+}
+
+
+.img_avatar_freinds{
+    width:60px;
+    height:60px;
+    padding:3px 3px 3px 3px;
+    border-radius: 30px 30px 30px 30px;
+-moz-border-radius: 30px 30px 30px 30px;
+-webkit-border-radius: 30px 30px 30px 30px;
+border: 2px solid black;
+}
+#badge{
+float: left;
+width: 60%;
+
+}
+#friend{
+width: 7%;
+float: left;
+
+}
+#email{
+float: left;
+width: 60%;
+
+}
+#owner{
+width: 7%;
+float: left;
+
+}
+
+ 
