@@ -40,7 +40,7 @@
 
     var salah = new user(2, 'salah', 'salah@gmail.com', "", './assets/img2.jpg');
     var ali = new user(1, 'Zin El Abidin Ben ali', 'ali@gmail.com', "", './assets/img1.jpg');
-    var hela = new user(3, 'Hela', 'hela@gmail.com', "", 'https://lh3.googleusercontent.com/SRfUCB-afJp1wIhwWsBr5S7mIbkR2_619JJcU3pVVXpuSd7vPuq-jcKWHD1g3XJC5jhtASG8HAMX=w1708-h961-rw-no');
+    var hela = new user(3, 'Hela', 'hela@gmail.com', "", './assets/img3.jpg');
 
     users.push(ali);
     users.push(salah);
