@@ -1,0 +1,54 @@
+
+    var vnotes = [];
+    var vnote = function (id, titre, description, author) {
+        this.id = id;
+        this.titre = titre;
+        this.description = description;
+        this.author = author;
+        this.vnoterender = function () {
+            var html = "";
+            html += '<h1>' + this.id + '</h1>';
+            html += '<p>' + this.titre + '</p>';
+            html += '<p>' + this.description + '</p>';
+            html += '<img src="' + this.author + '"/>';
+
+        }
+
+    }
+    var vnote1 = new vnote(1, 'javascript', 'un language de scripty léger ', '');
+    vnotes.push(vnote1);
+
+
+    var graphs = [];
+    var graph = function (id, owner) {
+        this.id = id;
+        this.owner = owner;
+
+        this.graphrender = function () {
+            var html = "";
+            html += '<h1>' + this.id + '</h1>';
+            html += '<p>' + this.owner + '</p>';
+
+
+        }
+    }
+
+    var graph1 = new graph(1, 'mohamed');
+    graphs.push(graph1);
+
+    var commentaires = [];
+    var commentaire = function (idligne, user) {
+        this.idligne = idligne;
+        this.user = user;
+
+        this.commentairerender = function () {
+            var html = "";
+            html += '<h1>' + this.idligne + '</h1>';
+            html += '<p>' + this.user + '</p>';
+
+
+        }
+
+    }
+    var commentaire1 = new commentaire(1, 'mohamed');
+    commentaires.push(commentaire1);
