@@ -1,4 +1,4 @@
 (function(){
-   console.log(exports);
    exports.userController();
+   exports.graphController();
 })(jQuery);
