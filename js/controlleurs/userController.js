@@ -6,7 +6,6 @@ var userController = function () {
     var friends = exports.friends;
 
     var html = exports.renderAll(user, friends);
-    console.log(html)
 
 }
 

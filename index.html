@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title Page</title>
+    <title>SAP Workshop</title>
 
     <!-- Bootstrap CSS -->
     <link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
@@ -17,10 +17,11 @@
 <body>
 
     <div class="page-header">
-        <h1>title<small>valiable note</small></h1>
+        <img class="img img-circle" style="width:55px;float:left;padding:5px" src="./assets/red_logo.png" />
+        <h1 class="text text-primary">Shared Valuable Notes</h1><small>SAP Workshop</small>
     </div>
 
-    <h1 class="text-center"> Menu</h1>
+
 
     <nav class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -62,41 +63,43 @@
         <!-- /.navbar-collapse -->
     </nav>
 
-
-     <!-- /.container -->
     <div class="container">
-        <div class="col-md-3">
-            <div id="theuser">
+        <!-- /.container -->
+        <div class="container">
+            <div class="col-md-3">
+                <div id="theuser">
+                </div>
             </div>
-        </div>
 
-        <div class="col-md-6">
-            Graph Place holder
-        </div>
-
-        <div class="col-md-3">
-            <h1>Amis</h1>
-            <div class="container" id="friendPanel">
+            <div class="col-md-6">
+                Graph Place holder
             </div>
-        </div>
-    
-     </div>   <!-- end of container -->
 
-    <div class="panel panel-default">
-        <div class="panel-body">
-            Panel content
+            <div class="col-md-3">
+                <h1>Amis</h1>
+                <div class="container" id="friendPanel">
+                </div>
+            </div>
+
         </div>
-        <div class="panel-footer">
-            Panel footer
-        </div>
+        <!-- end of container -->
     </div>
+    <div class="container">
+        <footer class="footer">
+            <h4 class="text-success">Atelier Single Application Page</h4>
+            <p class="text pull-left">Copyright Stagière Red 2017</p>
+        </footer>
+    </div>
+
 
     <!-- jQuery -->
     <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="./js/modeles/users.js"></script>
-    <script src="./js/views/userView.js"></script> 
-     <script src="./js/controlleurs/userController.js"></script>
+    <script src="./js/views/userView.js"></script>
+    <script src="./js/controlleurs/userController.js"></script>
     <script src="./index.js"></script>
 </body>
 
 </html>
+
