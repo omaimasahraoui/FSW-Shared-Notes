@@ -1,7 +1,7 @@
 exports = exports || {};
 
 var graphController = function () {
-    var graph = exports.graphModel;
+    var graph = new exports.graphModel();
     var html = exports.renderGraph(graph);
 
 }
