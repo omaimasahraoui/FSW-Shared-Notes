@@ -1,7 +1,7 @@
-exports=exports || {}
+userModel=require('./users.js');
 
 var graphModel=function(){
-        this.owner=new exports.userModel('7','Hammam Ben TALEB','hammam@gmail.com','','./assets/res_partner_address_25-image.png');
+        this.owner=userModel[3];
         this.posts=[
             {
                 title:"Node js in Application",
@@ -21,8 +21,9 @@ var graphModel=function(){
                 corps:"Ullamco quis nisi cupidatat adipisicing minim aliqua laborum irure velit ad veniam reprehenderit. Qui velit ea laborum ad dolore voluptate ex ullamco fugiat ad consectetur. Sit enim cillum fugiat laboris et sint Lorem sunt. Consectetur reprehenderit cupidatat laborum incididunt aliqua qui minim proident culpa proident irure minim laborum Lorem.",
                 author:"Alaa HELALI"
             }
-        ]
-        
+        ]     
 }
 
-exports.graphModel=graphModel;
+var theGraph=new graphModel();
+
+exports.graphModel=theGraph;
