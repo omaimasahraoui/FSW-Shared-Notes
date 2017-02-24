@@ -1,30 +1,72 @@
-var express=require('express');
+var express = require('express');
+var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
+var users = require('../modeles/users.js');
+
 var router = express.Router();
-var users =require('../modeles/users.js');
-var friends = require('../modeles/users.js');
 
 
-router.get('/allUsers',function(req,res){
-    console.log(users);
-   res.send(JSON.stringify(users));
+// Add User to database
+router.post('/', function (req, res) {
+    var user = new userModel();
+    user.name = req.body.name;
+    user.email = req.body.email;
+    user.mdp = req.body.mdp;
+    user.avatar = req.body.avatar;
+
+    user.save(function (err) {
+        if (err)
+            res.send(err);
+        res.json({ message: 'User added to the Users Collection!', data: user });
+    })
+});
+
+//Get All Users from Database
+
+router.get('/all', function (req, res) {
+    userModel.find(function (err, users) {
+        if (err) res.send(err);
+        res.send(users);
+    })
 })
 
-router.get('/allFriends',function(req,res){
-   res.send(JSON.stringify(users));
-})
+//Get One User by his id (mongo id)
 
-router.get('/:id',function(req,res){
-    var _id=parseInt(req.params.id);
-    var theUser={};
-    for(var i=0;i<users.length;i++){
-        if(users[i].id=_id){
-          theUser=users[i];
-        }
-    }
-   
-    console.log(theUser,_id);
-   res.send(JSON.stringify(theUser));
+router.get('/:id', function (req, res) {
+    var _id = req.params.id;
+    userModel.findById(_id, function (err, user) {
+        if (err) res.send(err);
+        res.send(user);
+    })
 })
 
 
-module.exports=router;
+// Update User
+router.put('/:id', function (req, res) {
+    var _id = req.params.id;
+    userModel.findById(_id, function (err, user) {
+        if (err) res.send(err);
+        user.name = req.body.name;
+        user.email = req.body.email;
+        user.mdp = req.body.mdp;
+        user.avatar = req.body.avatar;
+        user.save(function (err) {
+            if (err)
+                res.send(err);
+            res.json({ message: 'User updated successfully !', data: user });
+        })
+    })
+})
+
+
+// Remouve User from db
+
+router.delete('/:id', function (req, res) {
+    var _id = req.params.id;
+    userModel.findByIdAndRemove(_id, function (err) {
+        if (err) res.send(err);
+        res.json({message:'User rmouved succesufully !'});
+    })
+})
+
+module.exports = router;
