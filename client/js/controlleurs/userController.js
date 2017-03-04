@@ -6,7 +6,7 @@ var userController = function () {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "http://localhost:3000/api/users/allUsers",
+        "url": "http://localhost:3000/api/users/",
         "method": "GET",
         "headers": {
             "cache-control": "no-cache",
@@ -15,8 +15,9 @@ var userController = function () {
     }
 
     $.ajax(settings).done(function (response) {
-        users = JSON.parse(response);
-        friends = JSON.parse(response);
+       // console.log(response);
+        users = response;
+        friends = response;
         exports.renderAll(users[0],friends);
     });
 }

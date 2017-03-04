@@ -23,7 +23,7 @@ router.post('/', function (req, res) {
 
 //Get All Users from Database
 
-router.get('/all', function (req, res) {
+router.get('/', function (req, res) {
     userModel.find(function (err, users) {
         if (err) res.send(err);
         res.send(users);

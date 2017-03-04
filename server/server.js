@@ -17,13 +17,11 @@ var port = 3000 || env.port;
 // Define Routes
 var users=require('./routes/users.js');
 var graphs=require('./routes/graph.js');
+var posts=require('./routes/post.js')
 
 app.use('/api/users',users);
 app.use('/api/graphs',graphs);
-/*app.get('*', function(req, res){
-    res.send('Sorry, this is an invalid URL. Ferid');
-});*/
-
+app.use('/api/posts',posts)
 app.use(express.static(path.join( __dirname,'../client')));
 
 app.listen(port,function(){
