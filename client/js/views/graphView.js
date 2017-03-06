@@ -12,7 +12,7 @@ var renderOwner = function (owner) {
 }
 
 var renderPost = function (post) {
-    var html = '<div class="row">';
+    var html = '<div class="row post">';
     // html += '<img src="' + post.couverture_url + '" />';
     html += '<div class="panel panel-primary">';
     html += '<div class="panel-heading">';
@@ -64,6 +64,7 @@ var renderAllPosts = function (posts) {
 var renderGraph = function (myGraph) {
     $('#graphOwner').html(renderOwner(myGraph.owner));
     $('#main_graph').html(renderAllPosts(myGraph.posts));
+    return this;
 }
 
 

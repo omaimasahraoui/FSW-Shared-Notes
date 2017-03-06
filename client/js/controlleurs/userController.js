@@ -20,6 +20,8 @@ var userController = function () {
         friends = response;
         exports.renderAll(users[0],friends);
     });
+
+    return this;
 }
 
 exports.userController = userController;

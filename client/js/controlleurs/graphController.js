@@ -51,8 +51,9 @@ var graphController = function () {
             });
 
         })(jQuery);
-        console.log(exports.graph);
+        //console.log(exports.graph);
         exports.renderGraph(exports.graph);
+        return this;
 
     });
 }
